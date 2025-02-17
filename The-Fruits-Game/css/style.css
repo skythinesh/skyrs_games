@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #fff, #ccc);
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    position: relative;
+    top: 10px;
+    color: #109fe0;
+}
+
+#container {
+    width: 900px;
+    height: 700px;
+    margin: 10px auto;
+    top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    /*  box-shadow: [horizontal offset] [vertical offset] 
+    [blur radius] [spread radius] [color]; */
+    position: relative;
+    background-color: rgb(245, 100, 0);
+    background-image: linear-gradient(to right, rgb(245, 100, 0) 0%, rgb(255, 0, 0) 25%, rgb(181, 0, 125) 50%, rgb(33, 66, 156) 75%, rgb(0, 113, 255) 100%);
+            -webkit-text-fill-color: transparent"
+}
+
+#score {
+    background-color: white;
+    color: black;
+    padding: 11px;
+    position: absolute;
+    right: 11px;
+    box-shadow: 0px 4px white;
+}
+
+#correct {
+    position: absolute;
+    left: 45%;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+
+#wrong {
+    position: absolute;
+    left: 42%;
+    background-color: #de401a;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+
+#fruitContainer {
+    width: 800px;
+    height: 500px;
+    margin: 50px auto 10px auto;
+    background-color: white;
+    box-shadow: 0px 4px #535aa8;
+    text-align: center;
+    /* for horizontal center */
+    font-size: 100px;
+    font-family: cursive, sans-serif;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.fruit {
+    display: none;
+    position: absolute;
+}
+
+#instruction {
+    width: 450px;
+    height: 50px;
+    background-color: #b481d9;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0px 4px #8153a8;
+}
+
+#choices {
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.box:hover,
+#startreset:hover {
+    background-color: #9c89F6;
+    color: white;
+    box-shadow: 0px 4px #6b54d3;
+}
+
+.box:active,
+#startreset:active {
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
+
+#startreset {
+    width: 100px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0px auto;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+}
+
+#trialsleft {
+    width: 110px;
+    position: absolute;
+    padding: 8px;
+    top: 10px;
+    left: 11px;
+    background-color: rgba(16, 204, 179, 0.7);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.hearts {
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+#gameOver {
+    width: 520px;
+    height: 240px;
+    background: linear-gradient(#F3CA6B, #F3706C);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 110px;
+    left: 165px;
+    padding: 50px;
+    z-index: 2;
+    display: none;
+}
+
+@media (max-width: 570px) {
+    #container {
+        width: 440px;
+        top: 10px;
+    }
+
+    #correct {
+        left: 40%;
+    }
+
+    #wrong {
+        left: 38%;
+    }
+
+    #fruitContainer,
+    #instruction,
+    #choices {
+        width: 420px;
+    }
+
+    #startreset {
+        width: 205px;
+        margin: 0 auto;
+    }
+
+    #trialsleft {
+        width: 120px;
+        text-align: center;
+    }
+
+    #gameOver {
+        width: 360px;
+        height: 180px;
+        font-size: 1.7rem;
+        top: 140px;
+        left: 40px;
+        padding: auto 0px;
+    }
+}
